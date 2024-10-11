@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Example</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+        .image-scroll-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+        }
+
+        .image-scroll-item {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-scroll-item:hover {
+            transform: scale(1.05);
+        }
+
+        .image-scroll-item .city-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <!-- Navbar -->
+    <header class="bg-white-500 p-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <img src="./tt logo.jpeg" alt="Tamil Nadu Tourism Logo" class="h-20">
+        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex text-black">
+                <li class="mr-6"><a href="index.html" class="hover:text-red-800">Explore</a></li>
+                <li class="mr-6"><a href="Places To Go.html" class="hover:text-red-800">Places To Go</a></li>
+                <li class="mr-6"><a href="Things To Do.html" class="hover:text-red-800">Things To Do</a></li>
+                <li class="mr-6"><a href="#" class="hover:text-red-800">Heritage</a></li>
+                <li class="mr-6"><a href="#" class="hover:text-red-800">Virtual Tour</a></li>
+                <li class="mr-6"><a href="Contact.html" class="hover:text-red-800">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Swiper -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./hogenkal.webp" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="./ooty -2.jpg" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="./madurai.webp" alt="Image 3"></div>
+            <div class="swiper-slide"><img src="./kanchi.webp" alt="Image 4"></div>
+            <div class="swiper-slide"><img src="./ramesh.jpg" alt="Image 5"></div>
+            <div class="swiper-slide"><img src="./vid2.jpg" alt="Image 6"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3500, // Adjust delay (in milliseconds) as needed
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+
+    <!-- Destinations Section -->
+    <section class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl text-center font-semibold mb-8">Places To Delve Into</h2>
+            <h6 class="text-center font-normal mb-8">"From the misty Nilgiri hills to the sun-kissed beaches of Marina,
+                Tamil Nadu offers an enchanting diversity that captivates every traveler. Explore our vibrant cities,
+                tranquil hill stations, and cultural landmarks. Plan your journey through the heart of South India's
+                rich heritage and natural beauty."</h6>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                        <img src="./briha.webp" alt="Destination 1"
+                            class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                            <h3 class="text-base font-medium mb-2">Historical Sites</h3>
+                        </div>
+                    </div>
+                              
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./yercaud.webp" alt="Destination 2"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Natural Attractions</h3>
+                    </div>
+                </div>
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./pong.jpg" alt="Destination 3"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Cultural Experiences</h3>
+                    </div>
+                </div>
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./kanchi.webp" alt="Destination 1"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Spiritual Journeys</h3>
+                    </div>
+                </div>
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./covelong.webp" alt="Destination 2"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Adventure and Outdoor Activities</h3>
+                    </div>
+                </div>
+
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./chetinad.webp" alt="Destination 1"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Cuisine and Culinary Tours</h3>
+                    </div>
+                </div>
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./route.jpg" alt="Destination 2"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Scenic Drives and Road Trips</h3>
+                    </div>
+                </div>
+                <div class="relative bg-white group overflow-hidden rounded-lg hover:shadow-lg">
+                    <img src="./shiva.jpg" alt="Destination 3"
+                        class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg hover:scale-110">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white rounded-b-lg text-center">
+                        <h3 class="text-base font-medium mb-2">Health and Wellness</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Explore Section -->
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold mb-5">Explore Cities of Tamil Nadu</h1>
+        <div class="image-scroll-container">
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('chen.jpg');">
+                <div class="city-name">Chennai</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('mad.jpg');">
+                <div class="city-name">Madurai</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('kanyakumari.jpg');">
+                <div class="city-name">Kanyakumari</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('tan.jpeg');">
+                <div class="city-name">Thanjavur</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('cbe.jpg');">
+                <div class="city-name">Coimbatore</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('kan.jpg');">
+                <div class="city-name">Kanchipuram</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('pon.webp');">
+                <div class="city-name">Pondicherry</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('tirrrr.jpg');">
+                <div class="city-name">Tiruvannamalai</div>
+            </div>
+            <div class="image-scroll-item bg-gray-300 relative" style="background-image: url('ramesh.jpg');">
+                <div class="city-name">Rameswaram</div>
+            </div>
+
+
+        </div>
+    </div>
+
+<!-- video -->
+<section class="bg-gray-200 py-16">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-semibold mb-8">Travel Videos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           <!-- Video Card 1 -->
+ <div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <img src="./vid1.jpg" alt="Video Thumbnail" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-800">3 days in a French Colony</h3>
+      <p class="text-sm text-gray-600">Experience the charm of Tamil Nadu's French Colony in just 3 days with our captivating video tour.</p>
+      <a href="#" class="mt-2 inline-block bg-gray-300 text-grey px-4 py-2 rounded-full font-semibold hover:bg-gray-400 transition duration-300">Watch Video</a>
+    </div>
+  </div> 
+  <!-- Video Card 2 -->
+  <div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <img src="./vid3.jpg" alt="Video Thumbnail" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-800">Storytelling through Bharatnatyam</h3>
+      <p class="text-sm text-gray-600">Dive into Tamil Nadu's cultural heritage through a captivating Bharatanatyam performance.</p>
+      <a href="#" class="mt-2 inline-block bg-gray-300 text-grey px-4 py-2 rounded-full font-semibold hover:bg-gray-400 transition duration-300">Watch Video</a>
+    </div>
+  </div> 
+   <!-- Video Card 3 -->
+   <div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <img src="./vid2.jpg" alt="Video Thumbnail" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-800">Explore Masunagudi via Ooty</h3>
+      <p class="text-sm text-gray-600">Discover a captivating journey through Tamil Nadu's picturesque landscapes with scenic routes.</p>
+      <a href="#" class="mt-2 inline-block bg-gray-300 text-grey px-4 py-2 rounded-full font-semibold hover:bg-gray-400 transition duration-300">Watch Video</a>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer py-8 bg-gray-800">
+        <div class="container mx-auto flex flex-wrap justify-between">
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold text-white mb-4">About Us</h3>
+                <p class="text-sm  text-white">Established in 1971, Tamil Nadu Tourism Development Corporation (TTDC)
+                    showcases the cultural heritage, architectural wonders, and natural beauty of the southern state of
+                    Tamil Nadu, India.</p>
+            </div>
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold mb-4  text-white">Contact</h3>
+                <p class="text-sm  text-white">Tamil Nadu Tourism Complex, No.2, Wallajah Road, (Near Kalaivanar
+                    Arangam), Chennai - 600002</p>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Fax - 25333850</p>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Phone - 9675164655<p>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Mail - support@ttdconline.com</p>
+                </a>
+            </div>
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold mb-4  text-white">Connect</h3>
+                <div class="flex space-x-4">
+                    <img src="./whaticon.png" alt="WhatsApp" class="h-8 w-8">
+                    <img src="./facebook.png" alt="Facebook" class="h-8 w-8">
+                    <img src="./instagram.png" alt="Instagram" class="h-8 w-8">
+                    <img src="./youtube.png" alt="YouTube" class="h-8 w-8">
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+        const questions = document.querySelectorAll('.question h3');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.nextElementSibling.classList.toggle('answer');
+            });
+        });
+    </script>
+</body>
+
+</html>

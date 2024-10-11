@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu Tourism</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .center-text h1 {
+            font-size: 70px;
+        }
+
+        .center-text h3 {
+            font-size: 25px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image-container:hover .image-text {
+            opacity: 1;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .contain {
+           
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .questions {
+            margin-top: 100px;
+            flex: 1;
+            margin-right: 20px;
+            margin-left: 100px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .question h3 {
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        .answer {
+            display: none;
+        }
+
+        .image {
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <header class="bg-white-500 p-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <img src="./tt logo.jpeg" alt="Tamil Nadu Tourism Logo" class="h-20">
+        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex text-black">
+                <li class="mr-6"><a href="index.html" class="hover:text-red-800">Explore</a></li>
+                <li class="mr-6"><a href="Places To Go.html" class="hover:text-red-800">Places To Go</a></li>
+                <li class="mr-6"><a href="Things To Do.html" class="hover:text-red-800">Things To Do</a></li>
+                <li class="mr-6"><a href="#" class="hover:text-red-800">Heritage</a></li>
+                <li class="mr-6"><a href="#" class="hover:text-red-800">Virtual Tour</a></li>
+                <li class="mr-6"><a href="Contact.html" class="hover:text-red-800">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Section -->
+    <div class="video-container mb-8">
+        <video autoplay loop muted>
+            <source src="./4440864-hd-1920-1080-25fps_oLB60SUQ (2).mp4" type="video/mp4">
+        </video>
+        <div class="center-text text-white">
+            <h1 class="text-3xl font-bold mb-6">Experience Tamilnadu</h1>
+            <h3 class="text-lg">Discover the beauty of Tamilnadu - from its rich culture to its breathtaking landscapes.
+            </h3>
+            <a href="Places To Go.html"
+                class="bg-yellow-200 bg-opacity-50  hover:bg-opacity-75 text-white font-bold py-2 px-4 rounded inline-block">Dive
+                Deeper</a>
+        </div>
+    </div>
+
+    <!-- Explore Section -->
+    <main class="container mx-auto py-8 mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Top Favourites</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <div class="image-container">
+                <img src="./71UDzSoOpnL.jpg" alt="Image 1" class="w-full">
+                <div class="image-text">
+                    <h2 class="text-xl font-semibold">Kanyakumari</h2>
+                    <p class="text-sm">Experience the magnificent Thiruvalluvar statue at Kanyakumari's seafront.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./dance.webp" alt="Image 2" class="w-full">
+                <div class="image-text">
+                    <h2 class="text-xl font-semibold">Bharatanatyam</h2>
+                    <p class="text-sm">A traditional dance form where each mudra and graceful movement tells a story.
+                    </p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./food.jpeg" alt="Image 3" class="w-full">
+                <div class="image-text">
+                    <h2 class="text-xl font-semibold">Cuisine</h2>
+                    <p class="text-sm">Savor the spicy and flavorful essence of Tamil Nadu's rice meals.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./shore-temple.jpg" alt="Image 4" class="w-full">
+                <div class="image-text">
+                    <h2 class="text-xl font-semibold">Mahabalipuram</h2>
+                    <p class="text-sm">Discover the UNESCO World Heritage Site and ancient rock-cut temples</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Destinations Section -->
+    <section class="py-12">
+        <div class="container mx-auto mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Popular Destinations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="./chennai.webp" alt="Destination 1" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chennai</h3>
+                        <p class="text-gray-700">Capital city of Tamil Nadu, known for its beaches, culture, and
+                            history.</p>
+                        <a href="#" class="text-blue-600 mt-4 inline-block">Dive Deeper</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="./madurai.jpg" alt="Destination 2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Madurai</h3>
+                        <p class="text-gray-700">Famous for its ancient temples, rich heritage, and bustling markets.
+                        </p>
+                        <a href="#" class="text-blue-600 mt-4 inline-block">Dive Deeper</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="./ooty.jpg" alt="Destination 3" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ooty</h3>
+                        <p class="text-gray-700">A serene hill station known for its tea gardens, lakes, and picturesque
+                            views.</p>
+                        <a href="#" class="text-blue-600 mt-4 inline-block">Dive Deeper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 py-8 flex justify-between items-center mx-auto">
+        <div class="w-full md:w-2/5 max-w-lg bg-blue-500 bg-opacity-50 rounded-lg p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Find out about the cultural heritage of Tamilnadu</h2>
+            <p class="text-sm sm:text-base mb-6">There are many things and places unhidden, new amazing things and
+                places to explore, ancient ruins, great history and all.</p>
+            <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Take
+                the Quiz</a>
+        </div>
+        <div class="w-full md:w-3/5 relative p-8">
+            <img src="./agri.jpg" alt="Tamilnadu Tourism" class="w-full h-auto">
+            <div class="absolute inset-0 overlay"></div>
+            <div class="absolute inset-0 flex justify-center items-center">
+            </div>
+        </div>
+    </div>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-2 py-5 mx-auto mx-auto">
+            <div class="flex flex-col text-center w-full mb-2">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Experiences</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Discover the best of Tamilnadu with our curated
+                    experiences.</p>
+            </div>
+            <div class="flex flex-wrap-m-4">
+                <div class="p-4 md:w-1/4">
+                    <div
+                        class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden image-container">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./adventure.jpg"
+                            alt="experience">
+                        <div class="image-overlay">
+                            <h2 class="text-white text-lg title-font font-medium">Adventure</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4">
+                    <div
+                        class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden image-container">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./dosa.jpg"
+                            alt="experience">
+                        <div class="image-overlay">
+                            <h2 class="text-white text-lg title-font font-medium">Cuisine</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4">
+                    <div
+                        class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden image-container">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./culture.jpg"
+                            alt="experience">
+                        <div class="image-overlay">
+                            <h2 class="text-white text-lg title-font font-medium">Culture</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4">
+                    <div
+                        class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden image-container">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./health.avif"
+                            alt="experience">
+                        <div class="image-overlay">
+                            <h2 class="text-white text-lg title-font font-medium">Health</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contain">
+        <div class="questions">
+            <div class="question">
+                <h3>What are the top tourist attractions in Tamil Nadu?</h3>
+                <div class="answer">
+                    <p>Some of the top tourist attractions in Tamil Nadu include Marina Beach, Meenakshi Amman
+                        Temple, and Ooty.</p>
+                </div>
+            </div>
+            <div class="question">
+                <h3> What is the best time to visit Tamil Nadu?</h3>
+                <div class="answer">
+                    <p> The best time to visit Tamil Nadu is during the winter months, from November to
+                        February, when the weather is cool and pleasant.</p>
+                </div>
+            </div>
+            <div class="question">
+                <h3> Are there any famous festivals celebrated in Tamil Nadu?</h3>
+                <div class="answer">
+                    <p>Yes, Tamil Nadu is known for its vibrant festivals such as Pongal, Mahamagam Festival,
+                        and Chithirai Festival.</p>
+                </div>
+            </div>
+            <div class="question">
+                <h3> What are some traditional dishes of Tamil Nadu?</h3>
+                <div class="answer">
+                    <p>Traditional Tamil Nadu dishes include dosa, idli, sambar, and rasam.</p>
+                </div>
+            </div>
+            <div class="question">
+                <h3> Can I visit hill stations in Tamil Nadu?</h3>
+                <div class="answer">
+                    <p>Yes, Tamil Nadu is home to several beautiful hill stations such as Ooty, Kodaikanal,
+                        and Coonoor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./kaaaa.webp" alt="Tamil Nadu">
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer py-8 bg-gray-800">
+        <div class="container mx-auto flex flex-wrap justify-between">
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold text-white mb-4">About Us</h3>
+                <p class="text-sm  text-white">Established in 1971, Tamil Nadu Tourism Development Corporation (TTDC)
+                    showcases the cultural heritage, architectural wonders, and natural beauty of the southern state of
+                    Tamil Nadu, India.</p>
+            </div>
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold mb-4  text-white">Contact</h3>
+                <p class="text-sm  text-white">Tamil Nadu Tourism Complex, No.2, Wallajah Road, (Near Kalaivanar
+                    Arangam), Chennai - 600002</p>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Fax - 25333850</p>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Phone - 9675164655<p>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <p>Mail - support@ttdconline.com</p>
+                </a>
+            </div>
+            <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+                <h3 class="text-lg font-semibold mb-4  text-white">Connect</h3>
+                <div class="flex space-x-4">
+                    <img src="./whaticon.png" alt="WhatsApp" class="h-8 w-8">
+                    <img src="./facebook.png" alt="Facebook" class="h-8 w-8">
+                    <img src="./instagram.png" alt="Instagram" class="h-8 w-8">
+                    <img src="./youtube.png" alt="YouTube" class="h-8 w-8">
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+        const questions = document.querySelectorAll('.question h3');
+        questions.forEach(question => {
+          question.addEventListener('click', () => {
+            question.nextElementSibling.classList.toggle('answer');
+          });
+        });
+      </script>
+</body>
+
+</html>
